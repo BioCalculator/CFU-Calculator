@@ -263,7 +263,7 @@ select {
 
 body.dark {
     position: relative;
-    background: rgba(35, 35, 35, 0.9);
+    background: rgba(15, 15, 15, 0.9);
     color: white;
 }
 
@@ -459,3 +459,4 @@ body.dark .edit-default-content select {
     border: 1px solid #444;
 
 }
+
