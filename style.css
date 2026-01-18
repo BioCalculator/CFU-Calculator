@@ -401,6 +401,7 @@ body.dark .edit-default-btn {
     background: #222;
     color: #fff;
     border-color: #555;
+    border: 1px solid #555;
 }
 
 body.dark .edit-default-btn:hover {
@@ -459,4 +460,5 @@ body.dark .edit-default-content select {
     border: 1px solid #444;
 
 }
+
 
