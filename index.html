@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CFU/ml Calculator</title>
+  </head>
+  <body>
+    <div class="menu-btn" id="menuBtn">☰</div>
+    <div class="theme-btn" id="themeBtn">🌙</div>
+
+    <div class="side-menu" id="sideMenu">
+      <h3>Menu</h3>
+      <button onclick="showCFU()">CFU Calculator</button>
+      <button onclick="showMolarity()">Coming soon...</button>
+    </div>
+
+    <div class="container">
+      <!-- Info Button -->
+      <div class="info-wrapper">
+        <button
+          id="editDefaultBtn"
+          class="edit-default-btn"
+          aria-label="Change default"
+          title="Edit default CFU/ml value"
+        >
+          ▲
+        </button>
+        <button id="infoBtn" class="info-btn">i</button>
+      </div>
+      <!-- Info Modal -->
+      <div id="infoModal" class="info-modal">
+        <div class="info-content">
+          <span id="closeInfo" class="close-btn">&times;</span>
+          <h2>What is CFU/ml?</h2>
+          <p>
+            <b>CFU/ml (Colony Forming Units per millilitre)</b> is a measure of
+            the number of bacterial cells in a liquid culture that are capable
+            of forming colonies.
+          </p>
+
+          <h3>How is CFU/ml calculated here?</h3>
+          <p>
+            This calculator estimates CFU/ml from spectrophotometer readings
+            using optical density (O.D.).
+          </p>
+          <p style="text-align: center; font-weight: bold">
+            CFU/ml = (CFU per 1 O.D.) × (Measured O.D.)
+          </p>
+
+          <h3>Why is the default 8 × 10<sup>8</sup>?</h3>
+          <p>
+            For <i>E. coli</i>, an optical density of
+            <b>1.0 at OD<sub>600</sub></b>
+            typically corresponds to approximately
+            <b>8 × 10<sup>8</sup> CFU/ml</b> under standard laboratory
+            conditions.
+          </p>
+          <p>
+            This value is widely used as a biological approximation and may vary
+            depending on strain, growth conditions, and instrument calibration.
+          </p>
+        </div>
+      </div>
+      <h1>CFU/ml Calculator</h1>
+      <p
+        style="
+          text-align: center;
+          font-size: 0.9rem;
+          color: #4b5563;
+          margin-top: -10px;
+          margin-bottom: 18px;
+        "
+      >
+        Calculator give the concentration of bacterial cell cultures based on
+        spectrophotometer readings
+      </p>
+
+      <div class="button-group">
+        <button id="defaultBtn" class="active">Default (8 × 10⁸)</button>
+        <button id="customBtn" class="inactive">Custom</button>
+      </div>
+
+      <div id="customSection" class="custom-section">
+        <label style="text-align: center">Custom CFU/ml per 1 O.D.</label>
+        <div class="row">
+          <input
+            type="number"
+            step="0.0001"
+            id="customValue"
+            placeholder="e.g. 8"
+          />
+          <select id="customPower"></select>
+        </div>
+      </div>
+
+      <label>O.D.</label>
+      <input
+        type="number"
+        step="0.0001"
+        id="odInput"
+        placeholder="Enter OD value"
+      />
+
+      <div class="result" id="result">CFU/ml:</div>
+    </div>
+    <!-- Edit Default Modal -->
+    <div id="editDefaultModal" class="edit-default-modal">
+      <div class="edit-default-content">
+        <h4>Edit Default CFU/ml per 1 O.D.</h4>
+
+        <div class="row">
+          <input
+            type="number"
+            id="defaultBaseInput"
+            placeholder="Base value (e.g. 8)"
+          />
+
+          <select id="defaultPowerSelect"></select>
+        </div>
+
+        <div class="edit-actions">
+          <button id="saveDefaultBtn">Save</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
