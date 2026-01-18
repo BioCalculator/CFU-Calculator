@@ -18,8 +18,6 @@ This tool is designed for students and researchers working with microbial cultur
 - Responsive, mobile-friendly UI
 - Pure **Vanilla JavaScript** (no frameworks)
 
-<img width="1919" height="823" alt="image" src="https://github.com/user-attachments/assets/0535d205-a9d2-4adf-a83c-cbd9ae2cdbcb" />
-
 
 ## 🧮 How the Calculation Works
 
@@ -47,7 +45,7 @@ This value can be edited to suit different organisms or experimental conditions.
 - Toggle dark mode using the button in the top-right corner
 - Preference is saved automatically
 
-<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/af074f45-a16d-4640-8c88-a5c9b9c348df" />
+
 
 ---
 
